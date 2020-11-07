@@ -1,6 +1,7 @@
 package com.project.chat_app_tracker.models;
 
 import com.project.chat_app_tracker.models.enums.Gender;
+import com.project.chat_app_tracker.models.enums.Situation;
 
 import java.util.Date;
 
@@ -19,6 +20,8 @@ public class UserModel {
     private boolean isParent;
     private Gender gender;
     private String[] familyId;
+    private Float[] sentiments;
+    private Situation[] situation;
 
     public UserModel(String id, String username, String firstName, String lastName, String email,
                      String imageProfileURL, String password, Date dateBirth, Date timeCreated,
@@ -150,5 +153,21 @@ public class UserModel {
 
     public void setFamilyId(String[] familyId) {
         this.familyId = familyId;
+    }
+
+    public Float[] getSentiments() {
+        return sentiments;
+    }
+
+    public void setSentiments(Float[] sentiments) {
+        this.sentiments = sentiments;
+    }
+
+    public Situation[] getSituation() {
+        return situation;
+    }
+
+    public void setSituation(Situation[] situation) {
+        this.situation = situation;
     }
 }
