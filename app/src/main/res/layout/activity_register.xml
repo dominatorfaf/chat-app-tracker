@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gender"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_3"
+    android:visibility="visible"
+    tools:context=".ui.register.RegisterActivity"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="150dp"
+        android:layout_height="33dp"
+        android:text="Username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="445dp" />
+
+    <TextView
+        android:id="@+id/lastName"
+        android:layout_width="150dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="20dp"
+        android:text="Last Name"
+        app:layout_constraintBottom_toTopOf="@+id/username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/firstName"
+        android:layout_width="150dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="20dp"
+        android:text="First Name"
+        app:layout_constraintBottom_toTopOf="@+id/lastName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="152dp"
+        android:layout_height="34dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="556dp" />
+
+    <EditText
+        android:id="@+id/userDate"
+        android:layout_width="150dp"
+        android:layout_height="33dp"
+        android:ems="10"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="497dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
