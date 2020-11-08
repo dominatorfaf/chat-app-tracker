@@ -39,6 +39,7 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="@color/gray"
+        android:screenOrientation="portrait"
         app:layout_constraintBottom_toTopOf="@+id/confirm_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"

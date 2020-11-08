@@ -6,6 +6,7 @@
         android:layout_height="match_parent"
         android:background="@color/azure"
         android:visibility="visible"
+        android:screenOrientation="portrait"
         tools:context=".ui.register.FinalStepRegistration"
         tools:visibility="visible">
 
