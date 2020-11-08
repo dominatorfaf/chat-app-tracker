@@ -2,18 +2,22 @@ package com.project.chat_app_tracker.connection;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.project.chat_app_tracker.models.UserModel;
+
+import java.util.ArrayList;
 
 public class Connection {
-    private static FirebaseDatabase firebaseDatabase;
-    private static DatabaseReference databaseReference;
+    public static FirebaseDatabase firebaseDatabase;
+    public static DatabaseReference databaseReference;
+    private static Connection connection;
 
-    public static FirebaseDatabase getFirebaseDatabaseInstance() {
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        return firebaseDatabase;
-    }
+    private Connection() {}
 
-    public static DatabaseReference getDatabaseReferenceChild(String child) {
-        databaseReference = firebaseDatabase.getReference();
-        return databaseReference.child(child);
+    public static DatabaseReference getFirebaseReference(String ref) {
+        if (connection == null) {
+            connection = new Connection();
+            firebaseDatabase = FirebaseDatabase.getInstance();
+        }
+        return databaseReference = firebaseDatabase.getReference().child(ref);
     }
 }

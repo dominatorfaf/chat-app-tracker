@@ -7,13 +7,13 @@
     tools:context=".ui.chat.ChatActivity">
 
     <TextView
-        android:id="@+id/users"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:id="@+id/contacts"
+        android:layout_width="295dp"
+        android:layout_height="489dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="64dp"
+        android:textColor="@color/black"
         android:textSize="30sp"
-        android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

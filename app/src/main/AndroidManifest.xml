@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".ui.quiz.QuizChildActivity"></activity>
+        <activity android:name=".ui.quiz.QuizChildActivity"/>
         <activity android:name=".ui.quiz.QuizParentActivity" />
         <activity android:name=".ui.register.ChatRoom" />
         <activity android:name=".ui.register.FinalStepRegistration" />
@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.register.RegisterActivity" />
-        <activity android:name=".ui.chat.ChatActivity" />
+        <activity android:name=".ui.chat.ChatActivity" >
+        </activity>
     </application>
 
 </manifest>

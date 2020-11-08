@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.project.chat_app_tracker.R;
+import com.project.chat_app_tracker.connection.Connection;
 import com.project.chat_app_tracker.models.UserModel;
 import com.project.chat_app_tracker.models.enums.Gender;
 import com.project.chat_app_tracker.ui.quiz.QuizChildActivity;
@@ -25,7 +26,6 @@ public class FinalStepRegistration extends AppCompatActivity {
     Button parentButton;
     Button youngButton;
 
-    private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
 
     @Override
@@ -69,9 +69,7 @@ public class FinalStepRegistration extends AppCompatActivity {
         parentButton = (Button) findViewById(R.id.parent);
         youngButton = (Button) findViewById(R.id.child);
 
-        //database init
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference().child("Users");
+        databaseReference = Connection.getFirebaseReference("Users");
 
         parentButton.setOnClickListener(new View.OnClickListener() {
             @Override
