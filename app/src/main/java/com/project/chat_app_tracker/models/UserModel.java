@@ -45,6 +45,10 @@ public class UserModel {
         this.familyId = familyId;
     }
 
+    public UserModel() {
+
+    }
+
     public String getId() {
         return id;
     }

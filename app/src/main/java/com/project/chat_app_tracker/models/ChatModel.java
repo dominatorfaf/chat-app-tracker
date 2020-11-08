@@ -9,6 +9,8 @@ public class ChatModel {
     private Date timeCreated;
     private Float[] sentiment;
 
+    public ChatModel() {}
+
     public ChatModel(String id, String[] participantsId, String[] chatMessages, Date timeCreated, Float[] sentiment) {
         this.id = id;
         this.participantsId = participantsId;

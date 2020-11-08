@@ -20,6 +20,13 @@ public class RegisterConfActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_conf);
 
+        Intent intent = getIntent();
+
+        String firstname = intent.getStringExtra("firstName");
+        String lastname = intent.getStringExtra("lastName");
+        String username = intent.getStringExtra("username");
+        String gender = intent.getStringExtra("gender");
+        String dateBirth = intent.getStringExtra("dateBirth");
 
         password = (EditText) findViewById(R.id.password);
         confirm_password = (EditText) findViewById(R.id.confirm_password);
@@ -34,7 +41,11 @@ public class RegisterConfActivity extends AppCompatActivity {
                 intent.putExtra("password", password.getText());
                 intent.putExtra("confirm_password", confirm_password.getText());
                 intent.putExtra("email", email.getText());
-
+                intent.putExtra("firstName", firstname);
+                intent.putExtra("lastName", lastname);
+                intent.putExtra("username", username);
+                intent.putExtra("gender", gender);
+                intent.putExtra("dateBirth", dateBirth);
                 startActivity(intent);
             }
         });
