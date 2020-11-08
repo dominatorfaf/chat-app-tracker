@@ -100,7 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RegisterActivity.this, RegisterCongActivity.class));
+                startActivity(new Intent(RegisterActivity.this, RegisterConfActivity.class));
             }
         });
     }
