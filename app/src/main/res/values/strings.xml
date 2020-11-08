@@ -3,7 +3,10 @@
     <string name="log_in_reference">Log In</string>
     <string name="register_reference"><u>Register</u></string>
     <string name="username_or_email">username or e-mail</string>
+    <string name="email">e-mail</string>
+    <string name="spin">gender</string>
     <string name="password">password</string>
+    <string name="confirm_password">confirm password</string>
     <string name="first_name">first name</string>
     <string name="last_name">last name</string>
     <string name="username">username</string>

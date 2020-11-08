@@ -19,7 +19,7 @@ import java.util.Calendar;
 public class RegisterActivity extends AppCompatActivity {
     EditText firstName, lastName, username, date;
     Button submit;
-    Spinner gender;
+//    Spinner gender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +95,7 @@ public class RegisterActivity extends AppCompatActivity {
         lastName = (EditText) findViewById(R.id.last_name);
         username = (EditText) findViewById(R.id.username);
         submit = (Button) findViewById(R.id.submit);
-        gender = (Spinner) findViewById(R.id.gender);
+//        gender = (Spinner) findViewById(R.id.gender);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
