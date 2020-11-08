@@ -21,12 +21,12 @@ public class RegisterConfActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register_conf);
 
         Intent intent = getIntent();
-
-        String firstname = intent.getStringExtra("firstName");
-        String lastname = intent.getStringExtra("lastName");
-        String username = intent.getStringExtra("username");
-        String gender = intent.getStringExtra("gender");
-        String dateBirth = intent.getStringExtra("dateBirth");
+        Bundle bundleFromIntent = intent.getBundleExtra("Package");
+        String firstname = bundleFromIntent.getString("first_name").toString();
+        String lastname = bundleFromIntent.getString("last_name").toString();
+        String username = bundleFromIntent.getString("username").toString();
+        String gender = bundleFromIntent.getString("gender").toString();
+        String dateBirth = bundleFromIntent.getString("date_birth").toString();
 
         password = (EditText) findViewById(R.id.password);
         confirm_password = (EditText) findViewById(R.id.confirm_password);
@@ -37,15 +37,17 @@ public class RegisterConfActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RegisterConfActivity.this, RegisterConfActivity.class);
-                intent.putExtra("password", password.getText());
-                intent.putExtra("confirm_password", confirm_password.getText());
-                intent.putExtra("email", email.getText());
-                intent.putExtra("firstName", firstname);
-                intent.putExtra("lastName", lastname);
-                intent.putExtra("username", username);
-                intent.putExtra("gender", gender);
-                intent.putExtra("dateBirth", dateBirth);
+                Intent intent = new Intent(getApplicationContext(), FinalStepRegistration.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("password", password.getText().toString());
+                bundle.putString("confirm_password", confirm_password.getText().toString());
+                bundle.putString("email", email.getText().toString());
+                bundle.putString("first_name", firstname);
+                bundle.putString("last_name", lastname);
+                bundle.putString("username", username);
+                bundle.putString("gender", gender);
+                bundle.putString("date_birth", dateBirth);
+                intent.putExtra("Package", bundle);
                 startActivity(intent);
             }
         });

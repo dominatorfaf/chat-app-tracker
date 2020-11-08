@@ -7,13 +7,13 @@ public class Connection {
     private static FirebaseDatabase firebaseDatabase;
     private static DatabaseReference databaseReference;
 
-    public static FirebaseDatabase getFirebaseDatabase() {
+    public static FirebaseDatabase getFirebaseDatabaseInstance() {
         firebaseDatabase = FirebaseDatabase.getInstance();
         return firebaseDatabase;
     }
 
-    public static DatabaseReference getDatabaseReference() {
+    public static DatabaseReference getDatabaseReferenceChild(String child) {
         databaseReference = firebaseDatabase.getReference();
-        return databaseReference;
+        return databaseReference.child(child);
     }
 }

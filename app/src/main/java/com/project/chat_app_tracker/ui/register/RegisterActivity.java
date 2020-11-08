@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -96,20 +97,21 @@ public class RegisterActivity extends AppCompatActivity {
         username = (EditText) findViewById(R.id.username);
 
         submit = (Button) findViewById(R.id.submit);
-        gender = (Spinner) findViewById(R.id.gender);
+        gender = (Spinner) findViewById(R.id.spinner);
+        String[] items = new String[] {"Male", "Female", "Other"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        gender.setAdapter(adapter);
 
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(RegisterActivity.this, RegisterConfActivity.class);
-                intent.putExtra("firstName", firstName.getText());
-                intent.putExtra("lastName", lastName.getText());
-                intent.putExtra("username", username.getText());
-                intent.putExtra("gender", gender.getSelectedItem().toString());
-                intent.putExtra("dateBirth", date.toString());
-                startActivity(intent);
-            }
+        submit.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), RegisterConfActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("first_name", firstName.getText().toString());
+            bundle.putString("last_name", lastName.getText().toString());
+            bundle.putString("username", username.getText().toString());
+            bundle.putString("gender", gender.getSelectedItem().toString());
+            bundle.putString("date_birth", date.toString());
+            intent.putExtra("Package", bundle);
+            startActivity(intent);
         });
-
     }
 }

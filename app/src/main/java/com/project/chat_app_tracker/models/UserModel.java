@@ -3,6 +3,7 @@ package com.project.chat_app_tracker.models;
 import com.project.chat_app_tracker.models.enums.Gender;
 import com.project.chat_app_tracker.models.enums.Situation;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class UserModel {
@@ -19,16 +20,17 @@ public class UserModel {
     private boolean isActive;
     private boolean isParent;
     private Gender gender;
-    private String[] familyId;
-    private String[] contactsId;
+    private ArrayList<String> familyId;
+    private ArrayList<String> contactsId;
 
-    private Float[] sentiments;
-    private Situation[] situation;
+    private ArrayList<Float> sentiments;
+    private ArrayList<Situation> situation;
 
     public UserModel(String id, String username, String firstName, String lastName, String email,
                      String imageProfileURL, String password, Date dateBirth, Date timeCreated,
                      Date lastUpdated, boolean isActive, boolean isParent, Gender gender,
-                     String[] familyId) {
+                     ArrayList<String> familyId, ArrayList<String> contactsId,
+                     ArrayList<Float> sentiments, ArrayList<Situation> situation) {
         this.id = id;
         this.username = username;
         this.firstName = firstName;
@@ -43,6 +45,9 @@ public class UserModel {
         this.isParent = isParent;
         this.gender = gender;
         this.familyId = familyId;
+        this.contactsId = contactsId;
+        this.sentiments = sentiments;
+        this.situation = situation;
     }
 
     public UserModel() {
@@ -141,7 +146,7 @@ public class UserModel {
         return isParent;
     }
 
-    public void setParent(boolean parent) {
+    public void setIsParent(boolean parent) {
         isParent = parent;
     }
 
@@ -153,35 +158,35 @@ public class UserModel {
         this.gender = gender;
     }
 
-    public String[] getFamilyId() {
+    public ArrayList<String> getFamilyId() {
         return familyId;
     }
 
-    public void setFamilyId(String[] familyId) {
+    public void setFamilyId(ArrayList<String> familyId) {
         this.familyId = familyId;
     }
 
-    public Float[] getSentiments() {
-        return sentiments;
-    }
-
-    public void setSentiments(Float[] sentiments) {
-        this.sentiments = sentiments;
-    }
-
-    public Situation[] getSituation() {
-        return situation;
-    }
-
-    public void setSituation(Situation[] situation) {
-        this.situation = situation;
-    }
-
-    public String[] getContactsId() {
+    public ArrayList<String> getContactsId() {
         return contactsId;
     }
 
-    public void setContactsId(String[] contactsId) {
+    public void setContactsId(ArrayList<String> contactsId) {
         this.contactsId = contactsId;
+    }
+
+    public ArrayList<Float> getSentiments() {
+        return sentiments;
+    }
+
+    public void setSentiments(ArrayList<Float> sentiments) {
+        this.sentiments = sentiments;
+    }
+
+    public ArrayList<Situation> getSituation() {
+        return situation;
+    }
+
+    public void setSituation(ArrayList<Situation> situation) {
+        this.situation = situation;
     }
 }
