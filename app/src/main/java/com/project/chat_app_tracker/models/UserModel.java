@@ -20,6 +20,8 @@ public class UserModel {
     private boolean isParent;
     private Gender gender;
     private String[] familyId;
+    private String[] contactsId;
+
     private Float[] sentiments;
     private Situation[] situation;
 
@@ -169,5 +171,13 @@ public class UserModel {
 
     public void setSituation(Situation[] situation) {
         this.situation = situation;
+    }
+
+    public String[] getContactsId() {
+        return contactsId;
+    }
+
+    public void setContactsId(String[] contactsId) {
+        this.contactsId = contactsId;
     }
 }
