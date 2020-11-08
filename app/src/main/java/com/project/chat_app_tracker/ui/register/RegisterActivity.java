@@ -17,7 +17,7 @@ import com.project.chat_app_tracker.R;
 import java.util.Calendar;
 
 public class RegisterActivity extends AppCompatActivity {
-    EditText firstName, lastName, username, date;
+    EditText firstName, lastName, username, date ;
     Button submit;
 //    Spinner gender;
 
@@ -94,14 +94,22 @@ public class RegisterActivity extends AppCompatActivity {
         firstName = (EditText) findViewById(R.id.first_name);
         lastName = (EditText) findViewById(R.id.last_name);
         username = (EditText) findViewById(R.id.username);
+
         submit = (Button) findViewById(R.id.submit);
 //        gender = (Spinner) findViewById(R.id.gender);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RegisterActivity.this, RegisterConfActivity.class));
+                Intent intent = new Intent(RegisterActivity.this, RegisterConfActivity.class);
+                intent.putExtra("firstName", firstName.getText());
+                intent.putExtra("lastName", lastName.getText());
+                intent.putExtra("username", username.getText());
+
+                startActivity(intent);
             }
+
         });
+
     }
 }

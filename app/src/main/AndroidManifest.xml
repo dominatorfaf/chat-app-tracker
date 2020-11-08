@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".ui.register.RegisterConfActivity"></activity>
+        <activity android:name=".ui.register.ChatRoom"></activity>
+        <activity android:name=".ui.register.FinalStepRegistration" />
+        <activity android:name=".ui.register.RegisterConfActivity" />
         <activity android:name=".ui.start.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
