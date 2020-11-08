@@ -5,57 +5,99 @@
     android:id="@+id/gender"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_3"
+    android:background="@color/azure"
     android:visibility="visible"
     tools:context=".ui.register.RegisterActivity"
     tools:visibility="visible">
 
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="150dp"
-        android:layout_height="33dp"
-        android:text="Username"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="445dp" />
 
-    <TextView
-        android:id="@+id/lastName"
-        android:layout_width="150dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="20dp"
-        android:text="Last Name"
+    <EditText
+        android:id="@+id/first_name"
+        android:layout_width="165dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/roundedbuttongreen"
+        android:ems="10"
+        android:hint="@string/first_name"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/gray"
         app:layout_constraintBottom_toTopOf="@+id/username"
+        app:layout_constraintEnd_toStartOf="@+id/last_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/username" />
+
+    <EditText
+        android:id="@+id/last_name"
+        android:layout_width="165dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/roundedbuttongreen"
+        android:ems="10"
+        android:hint="@string/last_name"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/username"
+        app:layout_constraintEnd_toEndOf="@+id/username" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="350dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="352dp"
+        android:background="@drawable/roundedbuttongreen"
+        android:ems="10"
+        android:hint="@string/username"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/firstName"
-        android:layout_width="150dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="20dp"
-        android:text="First Name"
-        app:layout_constraintBottom_toTopOf="@+id/lastName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <EditText
+        android:id="@+id/birth_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:textColor="@color/white"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="152dp"
-        android:layout_height="34dp"
-        android:spinnerMode="dropdown"
+        android:layout_width="113dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="44dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="556dp" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/birth_date"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
-    <EditText
-        android:id="@+id/userDate"
-        android:layout_width="150dp"
-        android:layout_height="33dp"
-        android:ems="10"
-        android:inputType="date"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="497dp" />
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="112dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="232dp"
+        android:background="@drawable/roundedbutton"
+        android:text="@string/submit"
+        android:textAlignment="center"
+        android:textColor="@color/azure"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birth_date"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

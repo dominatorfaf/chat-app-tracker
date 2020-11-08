@@ -9,7 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.project.chat_app_tracker.R;
-import com.project.chat_app_tracker.ui.login.LoginActivity;
+import com.project.chat_app_tracker.ui.chat.ChatActivity;
+import com.project.chat_app_tracker.ui.register.RegisterActivity;
 
 public class StartActivity extends AppCompatActivity {
     Button loginViewReference;
@@ -18,14 +19,13 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-
-        loginViewReference.findViewById(R.id.loginPage);
-        registerViewReference.findViewById(R.id.register_view_reference);
+        loginViewReference = (Button) findViewById(R.id.login_page);
+        registerViewReference = (TextView) findViewById(R.id.register_view_reference);
 
         loginViewReference.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(StartActivity.this, LoginActivity.class));
+                startActivity(new Intent(StartActivity.this, ChatActivity.class));
             }
         });
 

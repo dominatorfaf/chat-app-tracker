@@ -18,7 +18,6 @@
         </activity>
         <activity android:name=".ui.register.RegisterActivity"/>
         <activity android:name=".ui.chat.ChatActivity" />
-        <activity android:name=".ui.login.LoginActivity"/>
     </application>
 
 </manifest>
